@@ -1,6 +1,7 @@
 from typing import List
 
 def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+  
   x = nums1[0:m]
   y = nums2[0:n]
   nums1=x+y
@@ -28,10 +29,12 @@ def merge_sort(myList) -> None:
             if left[i] <= right[j]:
               # The value from the left half has been used
               myList[k] = left[i]
+              # Move the iterator forward
               i += 1
             else:
                 myList[k] = right[j]
                 j += 1
+            # Move to the next slot
             k += 1
 
         # For all the remaining values
@@ -45,6 +48,7 @@ def merge_sort(myList) -> None:
             j += 1
             k += 1
   return myList
+
 
 # Do not change the following code
 nums1 = []
